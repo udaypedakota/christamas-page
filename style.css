@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100%;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: url('https://github.com/lucasfernandodev/nativity/blob/master/assets/img/illustration-4701783_1920.png?raw=true');
+    background-size: 100vw 120vh;
+    background-position: top center;
+    z-index: 1;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+canvas {
+    position: absolute;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    min-height: 120vh;
+    background: url('https://github.com/lucasfernandodev/nativity/blob/master/assets/img/casa.png?raw=true');
+    background-size: 100vw 120vh;
+    background-position: top center;
+    z-index: 2;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    min-height: 120vh;
+    background: url('https://github.com/lucasfernandodev/nativity/blob/master/assets/img/arvore.png?raw=true');
+    background-size: 100vw 120vh;
+    background-position: top center;
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    z-index: 2;
+    opacity: 0.1;
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 10px white);
+    object-fit: cover;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+article,
+.post {
+    width: 100%;
+    max-width: 100%;
+}
+
+.intro {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 32px;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro .title {
+    position: absolute;
+    top: 150px;
+    left: 65%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: 400;
+    max-width: 375px;
+}
+
+.intro .title .current {
+    font-weight: bold;
+}
+
+.history {
+    width: 100%;
+    /* height: 190vh; */
+    margin-top: 9vh;
+    position: relative;
+    z-index: 99999;
+    background: #f1f1f1;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.03) inset, 0 0 40px rgba(0, 0, 0, 0.03) inset, 0 0 50px rgba(0, 0, 0, 0.03) inset, 0 0 60px rgba(0, 0, 0, 0.03) inset, 0 0 70px rgba(0, 0, 0, 0.03) inset, 0 0 80px rgba(0, 0, 0, 0.03) inset, 0 0 90px rgba(0, 0, 0, 0.03) inset, 0 0 100px rgba(0, 0, 0, 0.03) inset;
+    padding-bottom: 150px;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.history svg {
+    position: absolute;
+    top: 0;
+}
+
+.history .title {
+    display: block;
+    margin: 190px 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: rgba(1, 1, 1, 0.808);
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.history article {
+    display: block;
+    width: 700px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2em;
+    margin: 0 auto;
+    opacity: 0.5;
+    text-indent: 20px;
+}
+
+p {
+    margin: 30px auto;
+}
+
+svg {
+    width: 100vw;
+    position: absolute;
+    height: auto;
+}
+
+.facts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    list-style-type: disc;
+    padding-bottom: 100px;
+}
+
+.facts p {
+    text-indent: unset !important;
+}
+
+.galery {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    justify-content: space-around;
+}
+
+.galery .image {
+    max-width: calc((100% / 3) - 60px);
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    object-fit: cover;
+    transition: 500ms linear;
+}
+
+.galery .image:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    background: #237A57;
+    /* fallback for old browsers */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fafafa;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 470px) {
+    body {
+        background-size: 790px 100vh;
+        background-position: top right;
+    }
+    body::after {
+        background-size: 790px 100vh;
+        background-position: top right;
+    }
+    body::before {
+        display: none;
+    }
+    .intro .title {
+        position: absolute;
+        top: 50px;
+        left: 45%;
+        transform: translateX(-50%);
+        color: white;
+        font-weight: 400;
+        max-width: 375px;
+    }
+    .history {
+        box-shadow: unset;
+        margin-top: 0;
+        position: relative;
+        padding-bottom: 0 !important;
+    }
+    .history article {
+        display: block;
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 2em;
+        text-align: center;
+        opacity: 0.5;
+        text-indent: unset;
+    }
+    .history .title {
+        display: block;
+        margin: 50px 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: rgba(1, 1, 1, 0.808);
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .history .title:nth-child(1) {
+        margin-top: 0;
+    }
+    .history svg {
+        width: 100vw;
+        position: absolute;
+        height: 150px;
+        top: 0;
+        display: none;
+    }
+    article,
+    .post {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    .facts {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: left;
+        list-style-type: disc;
+        padding: 0 25px;
+        padding-bottom: 250px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .galery .image {
+        width: 100%;
+        max-width: calc(100% - 30px);
+        height: auto;
+        padding-bottom: 30px;
+        object-fit: cover;
+        transition: 500ms linear;
+        margin: 0 auto;
+    }
+}
